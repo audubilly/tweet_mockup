@@ -1,0 +1,11 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: bisque;
+}
+
+.list_container{
+    box-sizing: border-box;
+}
