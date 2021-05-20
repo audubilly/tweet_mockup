@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/list_container.css' %}"/>
+</head>
+
+<body>
+    <form method="post">
+        {% csrf_token %}
+        {{ form }}
+        <button type="submit">Post</button>
+    </form>
+    {% for tweet in all_tweets %}
+        <div class="list_container">
+            <p>{{ tweet.tweet }}</p>
+        <p>{{ tweet.tweet_time }}</p>
+        </div>
+    {% endfor %}
+</body>
+</html>
